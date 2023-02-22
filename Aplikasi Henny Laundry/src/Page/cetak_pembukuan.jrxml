@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="1190" pageHeight="842" orientation="Landscape" columnWidth="1150" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ab8f991c-002e-46b9-acf2-a91edc326231">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="144"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from pembukuan join pengeluaran on pengeluaran.kd_pengeluaran = pembukuan.kd_pengeluaran]]>
+	</queryString>
+	<field name="kode_pembukuan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_pembukuan" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_awal_pemasukan" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_akhir_pemasukan" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_pemasukan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kd_pengeluaran" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="laba" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_pengeluaran" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="biaya_listrik" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="biaya_air" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="biaya_pewangi" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="6c6dd9f7-4d4a-47a0-b988-a4170703426e" x="0" y="0" width="1150" height="42"/>
+				<textElement textAlignment="Center">
+					<font size="30" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN PEMBUKUAN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="713c690e-4926-496a-803b-d93cca669bc0" x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[kode_pembukuan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="267ca5b6-2af9-45e3-94b1-d0abfee33f2b" x="100" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[tgl_pembukuan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="804323df-443e-4125-99c8-69f858f976a2" x="200" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[tgl_awal_pemasukan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cd3ee8fc-aec2-4c4d-8661-95cff6c1d585" x="300" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[tgl_akhir_pemasukan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a74001f6-5d1f-4f3d-93a9-99d436062b58" x="400" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[total_pemasukan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="23de018c-2690-4e03-a5f8-a929341c997d" x="500" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[kd_pengeluaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ddfc34af-bd16-424e-82d2-0c7ace289ada" x="600" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[tanggal_pengeluaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="89f71595-d8be-43db-8d8f-5f70410f21aa" x="700" y="0" width="76" height="20"/>
+				<textElement/>
+				<text><![CDATA[biaya_listrik]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b136864d-9194-4d02-92e2-e06f5734ed14" x="776" y="0" width="83" height="20"/>
+				<textElement/>
+				<text><![CDATA[biaya_air]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2c370784-0858-465b-995d-becc8c2101ff" x="859" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[biaya_pewangi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d34556fe-8337-4489-a234-07c668cf22bc" x="959" y="0" width="85" height="20"/>
+				<textElement/>
+				<text><![CDATA[total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d17cee9b-30bf-444f-a172-eca499574da8" x="1044" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[laba]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="093d68f6-194d-4480-aa38-15bd53254454" x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{kode_pembukuan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7e198442-1a7a-416a-bb05-a59fef7fd22b" x="100" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tgl_pembukuan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7e807a98-ec27-4ee5-8953-570fd168b8bd" x="200" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tgl_awal_pemasukan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3e7d9f10-cf9d-4bcc-9195-b20400ca7e6c" x="300" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tgl_akhir_pemasukan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3d7acdb0-df00-44a1-bec8-cd376a6416c5" x="400" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{total_pemasukan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7fbe6ac5-6a59-44ab-95af-5c226d2374b2" x="500" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{kd_pengeluaran}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="77431ecc-103f-4f0e-bad9-62b02d4324a8" x="600" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tanggal_pengeluaran}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e54e9043-cbf3-4348-9b41-cc495609e91d" x="700" y="0" width="76" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{biaya_listrik}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b18d21f2-848b-442d-b9e4-1dcb813575b3" x="776" y="0" width="83" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{biaya_air}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a1db1994-34e3-414b-bb00-3d95e1fe3a2f" x="859" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{biaya_pewangi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c966b355-9c81-4c12-a5d8-a5027eafcb19" x="959" y="0" width="85" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6de92759-baca-4a61-b4a5-9991d9adf60e" x="1044" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{laba}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

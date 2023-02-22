@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="1684" pageHeight="1190" orientation="Landscape" columnWidth="1644" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2ab9874f-5ed0-4524-a47b-9ad62c8a2423">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from tbl_order join pelanggan on pelanggan.id_pelanggan=tbl_order.id_pelanggan join user on user.id_user=tbl_order.id_user join tbl_detail_order on tbl_order.kode_order=tbl_detail_order.kode_order join paket on paket.kd_paket=tbl_detail_order.kd_paket]]>
+	</queryString>
+	<field name="kode_order" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_pelanggan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_user" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_pesan" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_selesai" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="grand_total" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bayar" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kurang_bayar" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status_bayar" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kembalian" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status_ambil" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="musim" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_pelanggan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_telp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="username" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="password" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_hp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="akses" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kd_paket" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="qty" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="subtotal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="keterangan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_paket" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenis_paket" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="dbb5e121-8e1d-46ae-aef0-15bc17a92fe4" x="0" y="20" width="1644" height="41"/>
+				<textElement textAlignment="Center">
+					<font size="30" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN SELURUH DATATRANSAKSI]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="d691343b-a66b-4ef6-a746-a4ac503ed702" x="0" y="0" width="79" height="20"/>
+				<textElement/>
+				<text><![CDATA[kode_order]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="78b31e4f-5f4e-48b8-a40e-340f6ea86e94" x="79" y="0" width="75" height="20"/>
+				<textElement/>
+				<text><![CDATA[id_pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9a9ff3e5-8b9d-430d-bd65-47d77fdf5e04" x="154" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[nama_pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f0ae939f-6161-4b50-a7a0-4cac8e07848b" x="254" y="0" width="42" height="20"/>
+				<textElement/>
+				<text><![CDATA[alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="93f62959-b461-4398-8093-31f60112feff" x="296" y="0" width="48" height="20"/>
+				<textElement/>
+				<text><![CDATA[no_telp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b16acc58-d4f6-4e41-98b1-55da6809acb0" x="344" y="0" width="40" height="20"/>
+				<textElement/>
+				<text><![CDATA[id_user]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4fb879e1-641a-4297-ae7b-aad604abc11e" x="384" y="0" width="33" height="20"/>
+				<textElement/>
+				<text><![CDATA[nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bf37ddf8-54ab-45c8-b975-b5c1fbacc6fa" x="417" y="0" width="51" height="20"/>
+				<textElement/>
+				<text><![CDATA[username]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="59fd6032-6bd3-422d-9caa-61430c98ffd8" x="468" y="0" width="48" height="20"/>
+				<textElement/>
+				<text><![CDATA[password]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c1fbfbb1-c765-4332-ae8f-92c246166bd3" x="516" y="2" width="41" height="20"/>
+				<textElement/>
+				<text><![CDATA[no_hp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="519399fe-768a-40cb-9b8f-72456667cb1d" x="557" y="0" width="35" height="20"/>
+				<textElement/>
+				<text><![CDATA[akses]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9f20b0a7-a434-48e4-b61f-043309cfa341" x="592" y="0" width="51" height="20"/>
+				<textElement/>
+				<text><![CDATA[tgl_pesan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cd1c0cd5-b95c-48da-bb48-e1a7754823d3" x="643" y="2" width="56" height="20"/>
+				<textElement/>
+				<text><![CDATA[tgl_selesai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="724183b4-ca26-48b0-9ba3-c8ca74e82541" x="699" y="2" width="62" height="20"/>
+				<textElement/>
+				<text><![CDATA[grand_total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="42dbd690-6aac-40ba-ab64-9efbba10eaa8" x="761" y="2" width="38" height="20"/>
+				<textElement/>
+				<text><![CDATA[bayar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9e159edf-0a29-42cc-bacf-ec4553c4d22e" x="799" y="0" width="76" height="20"/>
+				<textElement/>
+				<text><![CDATA[kurang_bayar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="07567140-c366-40ee-9d2c-e8ef6c5ae85b" x="875" y="0" width="61" height="20"/>
+				<textElement/>
+				<text><![CDATA[kembalian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a7e03a0f-c071-472c-b1ab-b4c6f0d538b5" x="936" y="0" width="65" height="20"/>
+				<textElement/>
+				<text><![CDATA[status_bayar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="556954a3-d130-4a39-b9e2-73ac91c5210c" x="1001" y="0" width="74" height="20"/>
+				<textElement/>
+				<text><![CDATA[status_ambil]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="59a3a8f1-11ee-4c8a-a74d-140c0cc52123" x="1075" y="2" width="40" height="20"/>
+				<textElement/>
+				<text><![CDATA[musim]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d29c8d47-336b-488b-a6de-f83e2137cd88" x="1115" y="0" width="53" height="20"/>
+				<textElement/>
+				<text><![CDATA[kd_paket]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="96d63ae6-2b10-4d1a-870a-60c0b9476bc8" x="1168" y="0" width="26" height="20"/>
+				<textElement/>
+				<text><![CDATA[qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dd93b4ab-335f-40a2-8256-9817b888c4a7" x="1194" y="0" width="47" height="20"/>
+				<textElement/>
+				<text><![CDATA[subtotal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d3b16098-0037-4b56-b6e4-7a9a63f43292" x="1241" y="2" width="63" height="20"/>
+				<textElement/>
+				<text><![CDATA[keterangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bc7d829e-0415-48ca-a8a4-0bf8610eb43e" x="1304" y="0" width="68" height="20"/>
+				<textElement/>
+				<text><![CDATA[nama_paket]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="384bec92-fd00-4138-93a7-e6255bb30343" x="1372" y="0" width="58" height="20"/>
+				<textElement/>
+				<text><![CDATA[jenis_paket]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f528d9c8-d3c7-4db5-846d-4a57751f239c" x="1430" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[harga]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement uuid="2ef439cc-469c-4801-8996-bb02a4703a90" x="0" y="0" width="79" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{kode_order}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3258da00-b24a-4c6f-bc0e-115e99780537" x="79" y="0" width="75" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{id_pelanggan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="eb10c446-0adf-4b42-90c0-6688519eb64f" x="154" y="1" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama_pelanggan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a38f736c-f8cf-4ab5-9ed6-c74ffd487270" x="296" y="0" width="48" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{no_telp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="38e30ce3-9114-4321-8687-92d5b02ebff3" x="344" y="0" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{id_user}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3cc62176-9e78-483e-bf7d-adcf6c5f50e3" x="384" y="1" width="33" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="20700648-c872-44c4-b9f2-36d2c4850a68" x="417" y="2" width="51" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{username}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="abdac45b-d2af-4af9-971b-c638c7506f60" x="468" y="2" width="48" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{password}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d9ad1802-39ee-4c4a-9425-b1d8ede053a5" x="516" y="2" width="41" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{no_hp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="893b8c77-d37b-44a1-b207-0c9a5f6d81cf" x="557" y="2" width="35" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{akses}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="dca054ad-b2d4-4758-8639-f12c98356c5b" x="592" y="2" width="51" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tgl_pesan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="78b90566-6978-41f4-9829-392425a8c4de" x="643" y="1" width="56" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tgl_selesai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8b31aa22-2649-46d8-85ff-b31abd115d71" x="699" y="2" width="62" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{grand_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c1ebe496-891d-4a90-9eca-a5412f99c1d7" x="254" y="1" width="42" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="14cc1764-70f1-427b-9780-62b6a805d32e" x="761" y="1" width="38" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{bayar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2288e551-9e7e-4ae7-901b-8abf42b45a9e" x="799" y="2" width="76" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{kurang_bayar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="dcebf252-5f8b-4de2-9256-f7b434a9077b" x="875" y="1" width="61" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{kembalian}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c3982e35-c52d-4e10-ad1b-8c45ab6f6dfb" x="936" y="2" width="65" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{status_bayar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="529c4f98-db0b-425d-afd3-df9ebef6e97e" x="1001" y="2" width="74" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{status_ambil}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d474e62f-1a9d-462a-9283-4f620a00e255" x="1075" y="2" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{musim}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="07cfca6b-7eea-4ce0-bff6-e80b4f7fd04a" x="1115" y="2" width="53" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{kd_paket}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b1ce3ede-b871-4e90-94f7-45b07ad27365" x="1168" y="0" width="26" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7fac3be7-3197-4221-9511-324308f35656" x="1194" y="2" width="47" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{subtotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a654d5b2-de9f-4cba-b0e4-5e502e9f6acd" x="1241" y="2" width="63" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{keterangan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ea7d768e-799c-465d-b24e-3217bb41fd33" x="1304" y="2" width="68" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama_paket}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="98c4e92f-6aa8-465c-bd40-855ea86b2f53" x="1372" y="0" width="58" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{jenis_paket}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ae178402-38c1-439e-b01b-79bbd36936c8" x="1430" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="50"/>
+	</summary>
+</jasperReport>
